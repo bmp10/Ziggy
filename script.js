@@ -98,7 +98,7 @@ function ani() {
 
     let updist = pipe.x <= flappycenter[0] && flappycenter[0] <= pipe.x + pipe.width ? flappycenter[1] - (canvas.height - pipe.height - pipe.gap) : undefined;
     let downdist = pipe.x <= flappycenter[0] && flappycenter[0] <= pipe.x + pipe.width ? canvas.height - flappycenter[1] - pipe.height : (canvas.height - 100) - flappycenter[1];
-    let rightdist = pipe.x - 100 - flappysize / 2;
+    let rightdist = canvas.height - pipe.height <= flappycenter[1] || flappycenter[1] <= canvas.height - (pipe.height + pipe.gap) ? pipe.x - 100 - flappysize / 2 : undefined;
     let urdist = 0;
     let drdist = 0;
 
